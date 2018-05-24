@@ -17,24 +17,10 @@ type Transcode struct {
 
 // Trans 转化字符串
 type Trans interface {
-	FromByte([]byte) Trans
-	FromString(string) Trans
 	Decode(string) Trans
 	Encode(string) Trans
 	ToByteArray() []byte
 	ToString() string
-}
-
-// FromByte 输入要转码的 byte 数组
-func (t *Transcode) FromByte(b []byte) Trans {
-	t.b = b
-	return t
-}
-
-// FromString 输入要转码的字符串
-func (t *Transcode) FromString(s string) Trans {
-	t.b = []byte(s)
-	return t
 }
 
 // Decode decode string to UTF-8

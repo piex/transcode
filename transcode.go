@@ -17,10 +17,10 @@ type Transcode struct {
 
 // Trans 转化字符串
 type Trans interface {
-	Decode(string) Trans
-	Encode(string) Trans
-	ToByteArray() []byte
-	ToString() string
+	Decode(string) Trans // Decode decode string to UTF-8
+	Encode(string) Trans // Encode encode UTF-8 to GBK
+	ToByteArray() []byte // ToByteArray 输出转化后的 byte 数组
+	ToString() string    // ToString 输出转化后的字符串
 }
 
 // Decode decode string to UTF-8

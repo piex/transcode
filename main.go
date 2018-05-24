@@ -2,8 +2,8 @@ package transcode
 
 var t = new(Transcode)
 
-// FromByte 输入要转码的 byte 数组
-func FromByte(b []byte) Trans {
+// FromByteArray 输入要转码的 byte 数组
+func FromByteArray(b []byte) Trans {
 	t.b = b
 	return t
 }

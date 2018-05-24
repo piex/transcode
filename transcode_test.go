@@ -24,7 +24,7 @@ var (
 )
 
 func Test_Trans_GBK_ByteArray_TO_UTF8(t *testing.T) {
-	d := FromByte(gbkByte).Decode("GBK")
+	d := FromByteArray(gbkByte).Decode("GBK")
 	s := d.ToString()
 	b := d.ToByteArray()
 	if s != utf8String {
@@ -36,7 +36,7 @@ func Test_Trans_GBK_ByteArray_TO_UTF8(t *testing.T) {
 }
 
 func Test_Trans_GB18030_ByteArray_TO_UTF8(t *testing.T) {
-	d := FromByte(gb18030Byte).Decode("GB18030")
+	d := FromByteArray(gb18030Byte).Decode("GB18030")
 	s := d.ToString()
 	b := d.ToByteArray()
 	if s != utf8String {
@@ -48,7 +48,7 @@ func Test_Trans_GB18030_ByteArray_TO_UTF8(t *testing.T) {
 }
 
 func Test_Trans_GB2312_ByteArray_TO_UTF8(t *testing.T) {
-	d := FromByte(gb2312Byte).Decode("GB2312")
+	d := FromByteArray(gb2312Byte).Decode("GB2312")
 	s := d.ToString()
 	b := d.ToByteArray()
 	if s != utf8String {
@@ -96,7 +96,7 @@ func Test_Trans_GB2312_String_TO_UTF8(t *testing.T) {
 }
 
 func Test_Trans_UTF8_ByteArray_TO_GBK(t *testing.T) {
-	gbk := FromByte(utf8Byte).Encode("GBK")
+	gbk := FromByteArray(utf8Byte).Encode("GBK")
 	s := gbk.ToString()
 	b := gbk.ToByteArray()
 	if s != gbkString {
@@ -108,7 +108,7 @@ func Test_Trans_UTF8_ByteArray_TO_GBK(t *testing.T) {
 }
 
 func Test_Trans_UTF8_ByteArray_TO_GB18030(t *testing.T) {
-	gb18030 := FromByte(utf8Byte).Encode("GB18030")
+	gb18030 := FromByteArray(utf8Byte).Encode("GB18030")
 	s := gb18030.ToString()
 	b := gb18030.ToByteArray()
 	if s != gbkString {
@@ -120,7 +120,7 @@ func Test_Trans_UTF8_ByteArray_TO_GB18030(t *testing.T) {
 }
 
 func Test_Trans_UTF8_ByteArray_TO_GB2312(t *testing.T) {
-	gb2312 := FromByte(utf8Byte).Encode("GB2312")
+	gb2312 := FromByteArray(utf8Byte).Encode("GB2312")
 	s := gb2312.ToString()
 	b := gb2312.ToByteArray()
 	if s != gbkString {

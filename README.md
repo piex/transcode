@@ -5,10 +5,10 @@ transcode is a lib transcode between UTF-8 and GBK/GB2312/GB10830 for golang.
 
 ## Install
 
-he easiest way to install is to run `go get -u github.com/foreverzmy/transcode`.
-You can also manually git clone the repository to $GOPATH/src/github.com/foreverzmy/transcode.
+he easiest way to install is to run `go get -u github.com/piex/transcode`.
+You can also manually git clone the repository to $GOPATH/src/github.com/piex/transcode.
 
-When you use vgo, you can run `vgo get github.com/foreverzmy/transcode@latest`.
+When you use vgo, you can run `vgo get github.com/piex/transcode@latest`.
 
 ## Package Files
 
@@ -20,7 +20,7 @@ To use the package, you'll need the appropriate import statement:
 
 ```go
 import (
-  "github.com/foreverzmy/transcode"
+  "github.com/piex/transcode"
 )
 ```
 

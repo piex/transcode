@@ -5,7 +5,7 @@ transcode is a lib transcode between UTF-8 and GBK/GB2312/GB10830 for golang.
 
 ## Install
 
-he easiest way to install is to run `go get -u github.com/piex/transcode`.
+The easiest way to install is to run `go get -u github.com/piex/transcode`.
 You can also manually git clone the repository to $GOPATH/src/github.com/piex/transcode.
 
 When you use vgo, you can run `vgo get github.com/piex/transcode@latest`.
@@ -28,12 +28,12 @@ The libraries use chained calls.
 
 * Transcode GBxxx to UTF-8
   ```go
-  s := transcode.FromString(gbkString).Encode("GBK").ToString()
+  s := transcode.FromString(gbkString).Decode("GBK").ToString()
   ```
 
 * Transcode UTF-8 to GBxxx
   ```go
-  s := transcode.FromString(utf8String).Decode("GBK").ToString()
+  s := transcode.FromString(utf8String).Encode("GBK").ToString()
   ```
 
 ### type Trans

@@ -68,4 +68,4 @@ func FromString(s string) Trans
 ```go
 func FromByteArray(b []byte) Trans
 ```
-输入一个比特数组的类型的变量，返回 Trans 的实例。
+输入一个比特数组类型的变量，返回 Trans 的实例。

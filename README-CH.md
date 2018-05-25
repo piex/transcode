@@ -17,7 +17,7 @@ transcode 是一个为 go 语言提供的在 UTF-8 和 GBK/GB2312/GB10830/HZGB23
 
 ## 使用
 
-要使用该软件包，需要先导入：
+要使用该软件包，需要先导入：
 
 ```go
 import (
@@ -36,12 +36,12 @@ import (
 * 把 UTF-8 转为 GBxxx
   ```go
   b := transcode.FromString(utf8String).Encode("GBK").ToByteArray()
-  s := transcode.FromByteArray(utf8String).Encode("GBK").ToString()
+  s := transcode.FromByteArray(utf8ByteArray).Encode("GBK").ToString()
   ```
 
 ### type Trans
 
-Transcode 的接口, 包含 transcode 的所以方法。
+Transcode 的接口, 包含 transcode 的所有方法。
 
 ```go
 type Trans interface {
